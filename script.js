@@ -77,7 +77,7 @@ if (contactForm) {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/api/contact",
+                "https://luxurybuild-backend.onrender.com/api/contact",
                 {
                     method: "POST",
 
