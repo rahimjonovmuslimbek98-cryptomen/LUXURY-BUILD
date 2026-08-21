@@ -110,23 +110,13 @@ ${message}
     }
 
 });
-
-
-
 app.listen(PORT, "0.0.0.0", () => {
+
     console.log(`
 ====================================
 LUXURYBUILD BACKEND
 Server running on port ${PORT}
 ====================================
     `);
-            success: false,
-            message: "Xabar yuborishda xatolik yuz berdi."
-        });
-
-    }
 
 });
-
-
- 
