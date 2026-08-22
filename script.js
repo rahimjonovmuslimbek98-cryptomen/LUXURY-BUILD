@@ -5,24 +5,63 @@
 const menuBtn = document.getElementById("menuBtn");
 const mainNav = document.getElementById("mainNav");
 
+function closeMobileMenu() {
+    if (!menuBtn || !mainNav) return;
+
+    mainNav.classList.remove("active");
+    menuBtn.classList.remove("active");
+}
+
 if (menuBtn && mainNav) {
+
     menuBtn.addEventListener("click", () => {
-        mainNav.classList.toggle("active");
-        menuBtn.classList.toggle("active");
+
+        const isOpen =
+            mainNav.classList.contains("active");
+
+        if (isOpen) {
+            closeMobileMenu();
+        } else {
+            mainNav.classList.add("active");
+            menuBtn.classList.add("active");
+        }
+
     });
+
 }
 
 const navLinks = document.querySelectorAll(".nav a");
 
 navLinks.forEach((link) => {
+
     link.addEventListener("click", () => {
-        mainNav.classList.remove("active");
-        menuBtn.classList.remove("active");
+        closeMobileMenu();
     });
+
+});
+
+document.addEventListener("click", (event) => {
+
+    if (!menuBtn || !mainNav) return;
+
+    const clickedInsideMenu =
+        mainNav.contains(event.target);
+
+    const clickedButton =
+        menuBtn.contains(event.target);
+
+    if (
+        mainNav.classList.contains("active") &&
+        !clickedInsideMenu &&
+        !clickedButton
+    ) {
+        closeMobileMenu();
+    }
+
 });
 
 
-// =========================
+// ========================
 // HEADER SCROLL
 // =========================
 
