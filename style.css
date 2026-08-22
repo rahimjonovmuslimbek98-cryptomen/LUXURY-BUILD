@@ -2722,3 +2722,77 @@ body {
 .price:hover {
     text-shadow: 0 0 20px rgba(197, 161, 91, 0.18);
 }
+/* =========================================
+   PRICING — BLACK & GOLD LUXURY PALETTE
+========================================= */
+
+.pricing {
+    position: relative;
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(197, 161, 91, 0.07),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(197, 161, 91, 0.05),
+            transparent 32%
+        ),
+        #070707;
+}
+
+.pricing-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(34, 30, 22, 0.96),
+            rgba(10, 10, 10, 0.99)
+        );
+
+    border-color: rgba(197, 161, 91, 0.16);
+}
+
+.pricing-card:hover {
+    border-color: rgba(197, 161, 91, 0.42);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.45),
+        0 0 35px rgba(197, 161, 91, 0.12);
+}
+
+.pricing-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #8f6f32,
+            #d8b86a,
+            #8f6f32,
+            transparent
+        );
+}
+
+.pricing-number {
+    color: #d0ad63;
+}
+
+.pricing-card h3 {
+    color: #f5f0e6;
+}
+
+.pricing-card h3::after {
+    background: #c5a15b;
+}
+
+.pricing-description {
+    color: rgba(245, 240, 230, 0.58);
+}
+
+.price {
+    color: #f5f0e6;
+}
+
+.price small {
+    color: #c5a15b;
+}
