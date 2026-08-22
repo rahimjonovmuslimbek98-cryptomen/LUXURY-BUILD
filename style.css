@@ -2050,3 +2050,12 @@ textarea:focus {
     }
 
 }
+/* Luxury Typography */
+.welcome-content h1,
+.logo,
+.hero h1,
+.section-title {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
