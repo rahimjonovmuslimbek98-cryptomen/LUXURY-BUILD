@@ -3201,3 +3201,173 @@ body {
         padding: 13px 14px;
     }
 }
+/* =========================================
+   FINAL MOBILE LUXURY OVERRIDES
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .services,
+    .projects,
+    .pricing,
+    .about,
+    .contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    /* HERO */
+
+    .hero {
+        padding-top: 110px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 12vw, 52px);
+        line-height: 1.03;
+    }
+
+    .hero-image {
+        height: 380px;
+        border-radius: 18px;
+    }
+
+    /* SERVICES */
+
+    .service-grid {
+        gap: 16px;
+    }
+
+    .service-card {
+        min-height: 230px;
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    /* PROJECTS */
+
+    .project-grid {
+        gap: 18px;
+    }
+
+    .project-card {
+        height: 430px;
+        border-radius: 18px;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 23px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* PRICING */
+
+    .pricing-grid {
+        gap: 16px;
+    }
+
+    .pricing-card {
+        min-height: 340px;
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .pricing-card h3 {
+        font-size: 23px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+    /* ABOUT */
+
+    .about {
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 380px;
+        border-radius: 18px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        padding-bottom: 70px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 24px;
+    }
+
+    .contact-details {
+        gap: 10px;
+    }
+
+    .contact-details p {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+
+    #contactForm {
+        gap: 14px;
+    }
+
+    #contactForm input,
+    #contactForm select,
+    #contactForm textarea {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #contactForm button[type="submit"] {
+        min-height: 54px;
+    }
+
+    /* PORTFOLIO MODAL */
+
+    .portfolio-modal {
+        padding: 14px;
+    }
+
+    .portfolio-content {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+    .portfolio-content img {
+        max-height: 55vh;
+    }
+}
