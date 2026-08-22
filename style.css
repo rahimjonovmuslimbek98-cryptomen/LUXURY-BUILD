@@ -3012,3 +3012,92 @@ body {
         font-size: 24px;
     }
 }
+/* =========================================
+   CONTACT — SELECT + SUBMIT BUTTON
+========================================= */
+
+#contactForm select {
+    width: 100%;
+    min-height: 54px;
+    padding: 16px 18px;
+
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#contactForm select:focus {
+    background: rgba(255, 255, 255, 0.045);
+
+    border-color: rgba(197, 161, 91, 0.55);
+
+    box-shadow:
+        0 0 0 3px rgba(197, 161, 91, 0.06);
+}
+
+#contactForm select option {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* Submit button — always separate row */
+
+#contactForm button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 56px;
+
+    margin-top: 4px;
+
+    border: 1px solid rgba(197, 161, 91, 0.45);
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c5a15b,
+            #9f7b3d
+        );
+
+    color: #080808;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(197, 161, 91, 0.18);
+}
