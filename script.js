@@ -316,3 +316,29 @@ document.addEventListener(
 
     }
 );
+// =========================================
+// CLICK GLOW EFFECT
+// =========================================
+
+const clickGlow = document.createElement("div");
+
+clickGlow.className = "click-glow";
+
+document.body.appendChild(clickGlow);
+
+document.addEventListener("pointerdown", (event) => {
+
+    clickGlow.style.left = `${event.clientX}px`;
+    clickGlow.style.top = `${event.clientY}px`;
+
+    clickGlow.classList.remove("active");
+
+    void clickGlow.offsetWidth;
+
+    clickGlow.classList.add("active");
+
+    setTimeout(() => {
+        clickGlow.classList.remove("active");
+    }, 550);
+
+});
