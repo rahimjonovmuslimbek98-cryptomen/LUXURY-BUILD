@@ -2129,3 +2129,110 @@ body {
         ),
         #050505;
 }
+/* =========================================
+   PREMIUM HERO BUTTONS
+========================================= */
+
+.hero-buttons .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 190px;
+    padding: 15px 26px;
+
+    border-radius: 999px;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.hero-buttons .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.25) 50%,
+            transparent 80%
+        );
+
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+}
+
+.hero-buttons .btn:hover::before {
+    transform: translateX(120%);
+}
+
+.hero-buttons .primary {
+    background:
+        linear-gradient(
+            135deg,
+            #35d9ff,
+            #8b5cff
+        );
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 25px rgba(53,217,255,0.25),
+        0 0 45px rgba(139,92,255,0.15);
+}
+
+.hero-buttons .primary:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 0 35px rgba(53,217,255,0.50),
+        0 0 70px rgba(139,92,255,0.25);
+}
+
+.hero-buttons .secondary {
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #fff;
+
+    backdrop-filter: blur(10px);
+}
+
+.hero-buttons .secondary:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    border-color: #35d9ff;
+
+    color: #35d9ff;
+
+    box-shadow:
+        0 0 25px rgba(53,217,255,0.22);
+}
+
+@media (max-width: 600px) {
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
