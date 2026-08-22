@@ -3101,3 +3101,103 @@ body {
     box-shadow:
         0 12px 30px rgba(197, 161, 91, 0.18);
 }
+/* =========================================
+   CONTACT — PREMIUM INFO CARD
+========================================= */
+
+.contact-info {
+    padding: 42px 36px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27, 24, 19, 0.96),
+            rgba(9, 9, 9, 0.99)
+        );
+
+    border: 1px solid rgba(197, 161, 91, 0.16);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30);
+}
+
+.contact-info h3 {
+    margin-bottom: 12px;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    color: #f5f0e6;
+}
+
+.contact-info > p {
+    margin-bottom: 30px;
+
+    color: rgba(245, 240, 230, 0.58);
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 14px 16px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-details p:hover {
+    transform: translateX(5px);
+
+    background: rgba(197, 161, 91, 0.045);
+
+    border-color: rgba(197, 161, 91, 0.30);
+}
+
+.contact-details a {
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contact-details p:hover a {
+    color: #c5a15b;
+}
+
+@media (max-width: 700px) {
+
+    .contact-info {
+        padding: 30px 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 24px;
+    }
+
+    .contact-details p {
+        padding: 13px 14px;
+    }
+}
