@@ -2796,3 +2796,97 @@ body {
 .price small {
     color: #c5a15b;
 }
+/* =========================================
+   ABOUT — LUXURY STUDIO
+========================================= */
+
+.about {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(197, 161, 91, 0.05),
+            transparent 30%
+        ),
+        #070707;
+}
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 55%,
+            rgba(0, 0, 0, 0.45) 100%
+        );
+
+    pointer-events: none;
+}
+
+.about-image img {
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.88);
+}
+
+.about-content .small-title {
+    color: #c5a15b;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.about-content h2 {
+    font-family: "Bodoni Moda", serif;
+
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.08;
+
+    color: #ffffff;
+}
+
+.about-content h2 span {
+    display: block;
+
+    color: #c5a15b;
+}
+
+.about-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 46px;
+    height: 1px;
+
+    margin-top: 22px;
+
+    background: #c5a15b;
+}
+
+@media (max-width: 700px) {
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-content h2 span {
+        display: inline;
+    }
+}
