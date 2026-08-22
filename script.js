@@ -89,6 +89,8 @@ if (contactForm) {
                 }
             );
 
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Yuborilmoqda...";
 
             const data = await response.json();
 
@@ -342,3 +344,23 @@ document.addEventListener("pointerdown", (event) => {
     }, 550);
 
 });
+// =========================================
+// PREMIUM WELCOME SCREEN
+// =========================================
+
+const welcomeScreen = document.getElementById("welcomeScreen");
+const enterSite = document.getElementById("enterSite");
+
+if (welcomeScreen && enterSite) {
+
+    enterSite.addEventListener("click", () => {
+
+        welcomeScreen.classList.add("hide");
+
+        setTimeout(() => {
+            welcomeScreen.style.display = "none";
+        }, 800);
+
+    });
+
+}

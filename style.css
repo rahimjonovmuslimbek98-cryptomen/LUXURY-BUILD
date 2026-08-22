@@ -1832,3 +1832,221 @@ textarea:focus {
 
     opacity: 1;
 }
+/* =========================================
+   PREMIUM WELCOME SCREEN
+========================================= */
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(53, 217, 255, 0.14),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(139, 92, 255, 0.14),
+            transparent 28%
+        ),
+        #050505;
+
+    overflow: hidden;
+}
+
+.welcome-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53, 217, 255, 0.20),
+            rgba(139, 92, 255, 0.10) 35%,
+            transparent 70%
+        );
+
+    filter: blur(25px);
+
+    animation: welcomePulse 4s ease-in-out infinite;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    animation: welcomeEnter 1.2s ease forwards;
+}
+
+.welcome-label {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.welcome-content h1 {
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 92px);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.welcome-content h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            #35d9ff,
+            #8b5cff,
+            #ff4fd8
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow:
+        0 0 30px rgba(53, 217, 255, 0.20);
+}
+
+.welcome-content p {
+    margin-top: 18px;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.60);
+}
+
+#enterSite {
+    margin-top: 42px;
+
+    padding: 15px 28px;
+
+    border: 1px solid rgba(53, 217, 255, 0.45);
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #fff;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+#enterSite span {
+    display: inline-block;
+
+    margin-left: 10px;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+#enterSite:hover {
+    transform: translateY(-4px);
+
+    border-color: #35d9ff;
+
+    background:
+        rgba(53, 217, 255, 0.08);
+
+    box-shadow:
+        0 0 25px rgba(53, 217, 255, 0.30),
+        0 0 60px rgba(139, 92, 255, 0.12);
+}
+
+#enterSite:hover span {
+    transform: translateX(6px);
+}
+
+.welcome-screen.hide {
+    animation: welcomeExit 0.8s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes welcomePulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+@keyframes welcomeEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes welcomeExit {
+
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .welcome-content h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .welcome-content p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .welcome-glow {
+        width: 300px;
+        height: 300px;
+    }
+
+}
