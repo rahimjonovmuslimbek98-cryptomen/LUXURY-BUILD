@@ -2059,3 +2059,73 @@ textarea:focus {
     font-weight: 500;
     letter-spacing: 2px;
 }
+/* =========================================
+   MAIN SITE CLEANUP
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main site headings */
+.hero h1,
+.section-title h2,
+.about-content h2,
+.contact .section-title h2 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+/* Keep small labels clean */
+.small-title,
+.section-title p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+}
+
+/* Header logo */
+.logo {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* Project/service titles stay clean */
+.service-card h3,
+.project-info h3,
+.pricing-card h3,
+.contact-info h3,
+.contact-form h3 {
+    text-shadow: none;
+}
+
+/* Better spacing */
+.hero h1 {
+    line-height: 1.05;
+}
+
+.hero-text {
+    line-height: 1.8;
+}
+
+.section-title h2 {
+    line-height: 1.15;
+}
+
+/* Cleaner neon background */
+body {
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(53, 217, 255, 0.06),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(139, 92, 255, 0.07),
+            transparent 26%
+        ),
+        #050505;
+}
