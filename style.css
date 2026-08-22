@@ -2689,3 +2689,36 @@ body {
         font-size: 23px;
     }
 }
+/* =========================================
+   PRICING — PREMIUM PRICE TYPOGRAPHY
+========================================= */
+
+.price {
+    margin: 28px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    font-family: "Bodoni Moda", serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+
+    color: #ffffff;
+}
+
+.price small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #c5a15b;
+}
+
+.price:hover {
+    text-shadow: 0 0 20px rgba(197, 161, 91, 0.18);
+}
